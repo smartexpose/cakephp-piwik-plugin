@@ -23,7 +23,7 @@ class PiwikComponent extends Component {
 	public function __construct(ComponentCollection $collection, $settings = array()) {
 		$this->settings = Hash::merge($this->settings, $settings);
 
-		App::import('Vendor', 'Piwik.Piwik/PiwikTracker');
+		App::import('Vendor', 'Piwik.PiwikTracker/PiwikTracker');
 		if (empty($this->PiwikTracker)) {
 			$this->PiwikTracker = new PiwikTracker($this->settings['idSite'], $this->settings['apiUrl']);
 		}
